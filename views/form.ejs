@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Message Form</title>
+  </head>
+  <body>
+    <h1>Message Form</h1>
+    <% /* form will make a post request and action specifies the URL where the
+    form data should be sent, server at /new will process the request */ %>
+    <form method="POST" action="/new">
+      <div>
+        <label for="user">User Name:</label>
+        <input type="text" id="user" name="user" required />
+      </div>
+      <div>
+        <label for="message">Message Text:</label>
+        <input type="text" id="message" name="message" required />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

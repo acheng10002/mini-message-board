@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <% // title, message, and message properties all accessed from res.render's
+    locals object %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <li>User: <%= message.user %></li>
+      <li>Message Text: <%= message.text %></li>
+      <li>Date Message Added: <%= message.added %></li>
+    </ul>
+    <a href="/">Back to All Messages</a>
+  </body>
+</html>

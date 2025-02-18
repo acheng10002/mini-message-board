@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <% // title accessed from res.render's locals object %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <% // title accessed from res.render's locals object %>
+    <h1><%= title %></h1>
+    <h2>Messages</h2>
+    <% /* messages accessed from res.render's locals object 
+    iterates through messages array, for each message object
+    render a ul element with an li element for each of the 
+    object's properties */%>
+    <% messages.forEach((message) => { %>
+        <ul>
+            <li>User: <%= message.user %></li>
+            <li>Message Text: <%= message.text %></li>
+            <li>Date Message Added: <%= message.added %></li>
+            <% /* link to user's message,
+            if message.user contains spaces, encodeURIComponent ensures 
+            it becomes URL safe */ %>
+            <a href="/message/<%= encodeURIComponent(message.user) %>"">
+                <button>Open Message Details</button>
+            </a>
+         </ul>
+    <% }) %>
+    <% // link to form %>
+    <a href="/new">Compose New Message</a>
+  </body>
+</html>
