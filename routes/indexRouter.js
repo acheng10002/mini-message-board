@@ -64,7 +64,7 @@ router.post("/new", (req, res) => {
     user: req.body.user,
     added: new Date(),
   });
-  // redirects client to different url
+  // redirects client to the root
   res.redirect("/");
 });
 
