@@ -1,4 +1,4 @@
-// import dependencies
+// import dependency
 const express = require("express");
 
 // initialize Express to initialize app
