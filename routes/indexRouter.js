@@ -6,7 +6,7 @@ const controller = require("../controllers/controller");
 
 router.get("/", controller.messagesListGet);
 
-router.get("/message/:user", controller.messagesFindGet);
+router.get("/message/:user", controller.messagesOneGet);
 
 router.get("/new", controller.messagesInsertGet);
 
@@ -17,6 +17,12 @@ router.post("/message/:id/delete", controller.messageDeletePost);
 module.exports = router;
 
 /*
+1. router
+2. controller
+3. queries
+4. view (EJS)
+5. test
+
 const { Router } = require("express");
 const router = Router();
 

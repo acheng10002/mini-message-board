@@ -5,7 +5,7 @@ async function messagesListGet(req, res) {
   res.render("index", { title: "Mini Message Board", messages: messages });
 }
 
-async function messagesFindGet(req, res) {
+async function messagesOneGet(req, res) {
   const messages = await db.getAllMessages();
   const user = req.params.user;
   const userMessage = messages.find((msg) => msg.user === user);
@@ -48,7 +48,7 @@ async function messageDeletePost(req, res) {
 
 module.exports = {
   messagesListGet,
-  messagesFindGet,
+  messagesOneGet,
   messagesInsertGet,
   messagesInsertPost,
   messageDeletePost,
