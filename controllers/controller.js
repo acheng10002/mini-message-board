@@ -34,9 +34,22 @@ async function messagesInsertPost(req, res) {
   res.redirect("/");
 }
 
+async function messageDeletePost(req, res) {
+  const messageId = req.params.id;
+
+  try {
+    await db.deleteMessage(messageId);
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error deleting message:", error);
+    res.status(500).send("Internal Server Error");
+  }
+}
+
 module.exports = {
   messagesListGet,
   messagesFindGet,
   messagesInsertGet,
   messagesInsertPost,
+  messageDeletePost,
 };

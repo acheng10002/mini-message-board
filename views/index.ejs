@@ -22,6 +22,12 @@
             <a href="/message/<%= encodeURIComponent(message.user) %>"">
                 <button>Open Message Details</button>
             </a>
+            <br>
+            <form action="/message/<%= message.id %>/delete" method="POST">
+              <button type="submit">
+                Delete Message
+              </button>
+            </form>
          </ul>
     <% }) %>
     <% // link to form %>
