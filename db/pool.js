@@ -3,6 +3,15 @@ require("dotenv").config();
 const { Pool } = require("pg");
 
 module.exports = new Pool({
+  host: "localhost",
+  user: "amycheng",
+  database: "mini_message_board",
+  password: "q",
+  port: 5432,
+});
+
+/*
+module.exports = new Pool({
   connectionString: process.env.DATABASE_URL,
   // uses SSL for cloud databases (Koyeb) automatically, disables SSL locally
   ssl: process.env.DATABASE_URL.includes("koyeb")
@@ -12,5 +21,6 @@ module.exports = new Pool({
     ssl:
     process.env.NODE_ENV === "production"
       ? { rejectUnauthorized: false }
-      : false, */
-});
+      : false, 
+}); 
+*/

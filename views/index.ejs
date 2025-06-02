@@ -16,9 +16,9 @@
             <li>User: <%= message.user %></li>
             <li>Message Text: <%= message.text %></li>
             <li>Date Message Added: <%= message.added %></li>
-            <% /* link to user's message,
+            <!-- link to user's message,
             if message.user contains spaces, encodeURIComponent ensures 
-            it becomes URL safe */ %>
+            it becomes URL safe -->
             <a href="/message/<%= encodeURIComponent(message.user) %>"">
                 <button>Open Message Details</button>
             </a>
